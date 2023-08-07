@@ -1,0 +1,101 @@
+{
+  "name": "@checksanity/exchangerate-host-api",
+  "version": "0.0.1",
+  "description": "exchangerate.host Web API written in Typescript",
+  "source": "src/index.ts",
+  "main": "dist/exchangerate-host-api.js",
+  "umd:main": "dist/exchangerate-host-api.umd.js",
+  "module": "dist/exchangerate-host-api.mjs",
+  "exports": {
+    "types": "./dist/ExchangerateHostApi.d.ts",
+    "require": "./dist/exchangerate-host-api.js",
+    "default": "./dist/exchangerate-host-api.modern.mjs"
+  },
+  "types": "dist/ExchangerateHostApi.d.ts",
+  "publishConfig": {
+    "access": "public",
+    "source": "src/index.ts",
+    "main": "dist/exhcangerate-host-api.js"
+  },
+  "author": {
+    "name": "Gary Bezruchko",
+    "email": "hello@void.dev",
+    "url": "https://voir.dev/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "format:verify": "prettier --list-different \"src/**/*.ts\"",
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "dev": "microbundle watch",
+    "build": "microbundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/checksanity/exchangerate-host-api"
+  },
+  "dependencies": {
+    "qs": "^6.11.2"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.3",
+    "@types/node": "^20.4.6",
+    "@types/qs": "^6.9.7",
+    "@types/uuid": "^9.0.2",
+    "@typescript-eslint/eslint-plugin": "^6.2.1",
+    "@typescript-eslint/parser": "^6.2.1",
+    "eslint": "^8.46.0",
+    "eslint-config-prettier": "^8.10.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "husky": "^8.0.3",
+    "jest": "^29.6.2",
+    "lint-staged": "^13.2.3",
+    "microbundle": "^0.15.1",
+    "prettier": "^3.0.1",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6",
+    "uuid": "^9.0.0"
+  },
+  "keywords": [
+    "exchange",
+    "currency rates",
+    "exchange currency",
+    "api",
+    "typescript",
+    "webapi"
+  ],
+  "jest": {
+    "testTimeout": 20000,
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "src",
+    "testRegex": ".*\\.spec\\.ts$",
+    "transform": {
+      "^.+\\.(t|j)s$": "ts-jest"
+    },
+    "collectCoverageFrom": [
+      "**/*.(t|j)s"
+    ],
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,ts}": [
+      "eslint \"{src,apps,libs,test}/**/*.ts\" --fix"
+    ],
+    "**/*.{js,ts,json}": [
+      "prettier --write"
+    ]
+  }
+}

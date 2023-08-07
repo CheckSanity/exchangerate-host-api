@@ -1,6 +1,6 @@
 {
   "name": "@checksanity/exchangerate-host-api",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "exchangerate.host Web API written in Typescript",
   "source": "src/index.ts",
   "main": "dist/exchangerate-host-api.js",
@@ -15,7 +15,7 @@
   "publishConfig": {
     "access": "public",
     "source": "src/index.ts",
-    "main": "dist/exhcangerate-host-api.js"
+    "main": "dist/exchangerate-host-api.js"
   },
   "author": {
     "name": "Gary Bezruchko",

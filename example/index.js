@@ -1,4 +1,4 @@
-import { ExchangerateHostApi } from '../dist/exhcangerate-host-api.js';
+import { ExchangerateHostApi } from '../dist/exchangerate-host-api.js';
 
 const api = ExchangerateHostApi.create();
 
